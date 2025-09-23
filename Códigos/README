@@ -1,0 +1,133 @@
+# Exemplos para a disciplina de Compiladores — Linguagem-Python
+
+Este repositório contém os exemplos usados nas apresentações da disciplina de Compiladores. O objetivo deste README é orientar quem for clonar/baixar o repositório sobre como preparar o ambiente, qual "compilador"/interpretador usar, como instalar, compilar/executar os exemplos e resolver problemas comuns.
+
+> Nota: Os exemplos são scripts em Python que serão executados com o interpretador CPython (não se trata de um compilador tradicional como gcc). Quando for necessário compilar código em outras linguagens ou usar ferramentas de análise/geração de código da disciplina, esse README explica como instalar e usar os interpretadores/compiladores relevantes.
+
+## Conteúdo
+
+- `exemplos/` — scripts e material usados nas apresentações (ex.: `apresentação 2.py`).
+
+## Para quem clonar/baixar o repositório
+
+Clone com Git:
+
+```bash
+git clone https://github.com/Compiladores-Linguagem-Python/Linguagem-Python.git
+cd Linguagem-Python
+```
+
+Ou baixe o ZIP pelo botão "Code" no GitHub e extraia o conteúdo.
+
+## Qual "compilador" / interpretador usamos aqui
+
+- Principal: CPython (interpretador oficial de Python) — versão recomendada: 3.10 ou 3.11.
+
+### Por que CPython?
+
+Os exemplos desta disciplina são escritos em Python para facilitar demonstrações interativas, manipulação de cadeias e árvores sintáticas. CPython é o interpretador oficial e suficiente para executar os scripts.
+
+## Instruções de instalação e execução
+
+As instruções abaixo cobrem os dois ambientes mais comuns: Windows (PowerShell) e Linux (bash/zsh). Use a seção correspondente ao seu sistema.
+
+### Windows (PowerShell)
+
+1. Instalar Python (CPython):
+
+  - Acesse https://www.python.org/downloads/ e baixe a versão 3.10.x ou 3.11.x.
+  - No instalador, marque "Add Python 3.x to PATH" e clique em "Install Now".
+
+2. Verificar instalação (PowerShell):
+
+```powershell
+python --version
+```
+
+3. Criar e ativar ambiente virtual (recomendado):
+
+```powershell
+# na raiz do repositório
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+```
+
+Se o PowerShell bloquear scripts, execute como Administrador e rode:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+4. Executar um exemplo (ex.: `apresentação 2.py`):
+
+```powershell
+# estando na raiz do repositório
+python .\exemplos\"apresentação 2.py"
+```
+
+Se preferir, coloque o caminho entre aspas simples ou duplas.
+
+### Linux (bash / zsh)
+
+1. Instalar Python (exemplos de comandos):
+
+- Debian/Ubuntu:
+
+```bash
+sudo apt update
+sudo apt install -y python3 python3-venv python3-pip
+```
+
+- Fedora:
+
+```bash
+sudo dnf install -y python3 python3-venv
+```
+
+- Arch/Manjaro:
+
+```bash
+sudo pacman -Syu python
+```
+
+2. Verificar instalação:
+
+```bash
+python3 --version
+```
+
+3. Criar e ativar venv:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+```
+
+4. Executar um exemplo:
+
+```bash
+python3 './exemplos/apresentação 2.py'
+```
+
+Para tornar o script executável:
+
+```bash
+chmod +x './exemplos/apresentação 2.py'
+./exemplos/'apresentação 2.py'
+```
+
+## Codificação e acentuação
+
+- Salve os arquivos .py em UTF-8. Se houver problemas com acentuação na saída do terminal, verifique/defina a locale UTF-8 no Linux (por exemplo `pt_BR.UTF-8`) ou altere a página de código no Windows (`chcp 65001`).
+- Se necessário, inclua no topo do arquivo Python (opcional em Python 3):
+
+```python
+# -*- coding: utf-8 -*-
+```
+
+## Contato
+
+Abra uma issue no GitHub ou contate o grupo para dúvidas específicas.
+
