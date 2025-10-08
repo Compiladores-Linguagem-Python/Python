@@ -1,8 +1,10 @@
-#Exemplos de código utilizados na terceira apresentação da linguagem Python.
+# Exemplos de código utilizados na terceira apresentação da linguagem Python.
 
 
+# -------------- TRATAMENTO DE EVENTOS E EXCEÇÕES -------------- #
 
-#Tratamento de Eventos Assíncronos
+
+# Tratamento de Eventos Assíncronos
 
 import asyncio
 
@@ -14,7 +16,8 @@ async def tarefa():
 asyncio.run(tarefa())
 
 
-#Tratamento de Sinais do Sistema
+
+# Tratamento de Sinais do Sistema
 
 import signal
 import sys
@@ -32,7 +35,7 @@ while True:
 
 
 
-#Tratamento de Exceções
+# Tratamento de Exceções
 
 try:
     lista = [1, 2, 3]
@@ -46,7 +49,7 @@ finally:
 
 
 
-#Criando Exceções Personalizadas
+# Criando Exceções Personalizadas
 
 class IdadeInvalida(Exception):
     pass
