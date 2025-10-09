@@ -60,15 +60,6 @@ mostrar(10)
 mostrar("Cindy")
 mostrar([1,2,3])
 
-# DELEGAÇÃO DE EXCEÇÃO
-def dividir(a, b):
-    if b == 0:
-        raise ZeroDivisionError("Divisão por zero!")
-    return a / b
-try:
-    dividir(5, 0)
-except ZeroDivisionError as e:
-    print("Erro tratado:", e)
 
 # -------------- TRATAMENTO DE EVENTOS E EXCEÇÕES -------------- #
 
@@ -132,3 +123,13 @@ try:
     print(verificar_idade(15))
 except IdadeInvalida as e:
     print("Erro:", e)
+    
+# DELEGAÇÃO DE EXCEÇÃO
+def dividir(a, b):
+    if b == 0:
+        raise ZeroDivisionError("Divisão por zero!")
+    return a / b
+try:
+    dividir(5, 0)
+except ZeroDivisionError as e:
+    print("Erro tratado:", e)
