@@ -3,7 +3,7 @@ Instruções para Execução do Programa
 validador.py  
 valores.txt (um valor monetário por linha)  
 2. Como Executar  
-* Coloque `validador.py` e `valores.txt` na mesma pasta (dêum cd q4 se necessário);  
+* Coloque `validador.py` e `valores.txt` na mesma pasta (dê um cd q4 se necessário);  
 * Abra o terminal dentro da pasta;  
 * Execute o comando: python3 validador.py  
 3. Entrada  
